@@ -6,19 +6,18 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 22:34:31 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/17 02:55:39 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/17 04:01:05 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdlib.h>
 #include "ft_io.h"
 #include "internal.h"
 #include "enum/e_ret.h"
 
 int	test_ft_atohhi(int *const ret)
 {
-	printf("%20s:", "ft_atohhi");
+	printf("%20s:", __func__ + 5);
 	result(0, ft_atohhi("") == 0);
 	result(1, ft_atohhi("  ") == 0);
 	result(2, ft_atohhi(" -") == 0);
