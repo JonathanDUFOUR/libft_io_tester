@@ -6,7 +6,7 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/16 00:16:26 by jodufour          #+#    #+#              #
-#    Updated: 2021/11/17 02:21:37 by jodufour         ###   ########.fr        #
+#    Updated: 2021/11/19 08:49:40 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -185,6 +185,9 @@ ${OBJ_DIR}%.o:	${SRC_DIR}%.c
 ${FT_IO_A}:
 	${MAKE} ${@F} -C ${@D}
 
+update:
+	git submodule update --remote
+
 clean:
 	${RM} ${OBJ_DIR}
 
@@ -199,4 +202,4 @@ endif
 
 re:	fclean all
 
-.PHONY:	all clean fclean re
+.PHONY:	all clean fclean re update
