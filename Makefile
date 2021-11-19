@@ -6,7 +6,7 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/16 00:16:26 by jodufour          #+#    #+#              #
-#    Updated: 2021/11/19 08:49:40 by jodufour         ###   ########.fr        #
+#    Updated: 2021/11/19 09:38:43 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -143,6 +143,7 @@ SRC				=	\
 						test_ft_utoa.c				\
 						test_get_next_line.c		\
 					}								\
+					err_msg.c						\
 					main.c							\
 					result.c
 

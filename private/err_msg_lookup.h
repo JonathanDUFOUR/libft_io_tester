@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   internal.h                                         :+:      :+:    :+:   */
+/*   err_msg_lookup.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 01:48:23 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/19 09:39:20 by jodufour         ###   ########.fr       */
+/*   Created: 2021/11/19 09:27:29 by jodufour          #+#    #+#             */
+/*   Updated: 2021/11/19 09:41:41 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INTERNAL_H
-# define INTERNAL_H
+#ifndef ERR_MSG_LOOKUP_H
+# define ERR_MSG_LOOKUP_H
 
-int		err_msg(int const err);
+# include "enum/e_ret.h"
 
-void	result(int const num, int const res);
+typedef struct s_err_msg	t_err_msg;
+
+struct s_err_msg
+{
+	int const	err;
+	char const	*msg;
+};
+
+static t_err_msg const		g_err_msg[] = {
+{0}
+};
 
 #endif
