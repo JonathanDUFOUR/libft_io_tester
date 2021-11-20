@@ -6,12 +6,13 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 09:20:21 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/20 10:33:05 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/20 22:56:33 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "ft_io.h"
+#include "ft_limits.h"
 #include "internal.h"
 #include "enum/e_ret.h"
 
@@ -25,8 +26,9 @@ int	test_ft_atohhi_base(int *const ret)
 	result(4, ft_atohhi_base("  -aa", "a") == 0);
 	result(5, ft_atohhi_base("ABBA  ", "BAOBAB") == 0);
 	result(6, ft_atohhi_base("ABBA  ", "BA") == 9);
-	result(7, ft_atohhi_base("+|||||.......", "|.") == 127);
+	result(7, ft_atohhi_base("+|||||.......", "|.") == g_hhint_max);
 	result(8, ft_atohhi_base("  -2AbC", "0123456789ABCDEF") == -42);
+	result(9, ft_atohhi_base(" -lxxxxxxx xxlxll", "xl") == g_hhint_min);
 	printf("\n");
 	return (*ret = SUCCESS);
 }
