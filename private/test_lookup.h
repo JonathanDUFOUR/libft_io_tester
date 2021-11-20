@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 01:14:11 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/19 08:17:01 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/20 09:19:28 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,25 @@ struct s_test
 };
 
 int	test_ft_atohhi(int *const ret);
+int	test_ft_atohhi_base(int *const ret);
 int	test_ft_atohhu(int *const ret);
+int	test_ft_atohhu_base(int *const ret);
 int	test_ft_atohi(int *const ret);
+int	test_ft_atohi_base(int *const ret);
 int	test_ft_atohu(int *const ret);
+int	test_ft_atohu_base(int *const ret);
 int	test_ft_atoi(int *const ret);
 int	test_ft_atoi_base(int *const ret);
 int	test_ft_atoli(int *const ret);
+int	test_ft_atoli_base(int *const ret);
 int	test_ft_atolli(int *const ret);
+int	test_ft_atolli_base(int *const ret);
 int	test_ft_atollu(int *const ret);
+int	test_ft_atollu_base(int *const ret);
 int	test_ft_atolu(int *const ret);
+int	test_ft_atolu_base(int *const ret);
 int	test_ft_atou(int *const ret);
+int	test_ft_atou_base(int *const ret);
 int	test_ft_cat(int *const ret);
 int	test_ft_convert_base(int *const ret);
 int	test_ft_ctoa(int *const ret);
@@ -121,16 +130,25 @@ int	test_get_next_line(int *const ret);
 
 static t_test const		g_test[] = {
 {"ft_atohhi", test_ft_atohhi},
+{"ft_atohhi_base", test_ft_atohhi_base},
 {"ft_atohhu", test_ft_atohhu},
+{"ft_atohhu_base", test_ft_atohhu_base},
 {"ft_atohi", test_ft_atohi},
+{"ft_atohi_base", test_ft_atohi_base},
 {"ft_atohu", test_ft_atohu},
+{"ft_atohu_base", test_ft_atohu_base},
 {"ft_atoi", test_ft_atoi},
 {"ft_atoi_base", test_ft_atoi_base},
 {"ft_atoli", test_ft_atoli},
+{"ft_atoli_base", test_ft_atoli_base},
 {"ft_atolli", test_ft_atolli},
+{"ft_atolli_base", test_ft_atolli_base},
 {"ft_atollu", test_ft_atollu},
+{"ft_atollu_base", test_ft_atollu_base},
 {"ft_atolu", test_ft_atolu},
+{"ft_atolu_base", test_ft_atolu_base},
 {"ft_atou", test_ft_atou},
+{"ft_atou_base", test_ft_atou_base},
 {"ft_cat", test_ft_cat},
 {"ft_convert_base", test_ft_convert_base},
 {"ft_ctoa", test_ft_ctoa},
