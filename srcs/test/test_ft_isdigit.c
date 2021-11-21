@@ -6,10 +6,11 @@
 /*   By: bcano <bcano@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:11:09 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/21 18:02:49 by bcano            ###   ########.fr       */
+/*   Updated: 2021/11/21 19:17:58 by bcano            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <ctype.h>
 #include <stdio.h>
 #include "ft_io.h"
 #include "tester.h"
@@ -21,25 +22,26 @@ struct	s_test
 {
 	int const	num;
 	unsigned const	test;
-	int const	expect;
 };
 
 static t_test const		g_test[] = {
-{0, 47, 0},
-{1, 48, 1},
-{2, 49, 1},
-{3, 50, 1},
-{4, 51, 1},
-{5, 52, 1},
-{6, 53, 1},
-{7, 54, 1},
-{8, 55, 1},
-{9, 56, 1},
-{10, 57, 1},
-{11, 58, 0},
-{12, -50, 0},
+{0, 47},
+{1, 48},
+{2, 49},
+{3, 50},
+{4, 51},
+{5, 52},
+{6, 53},
+{7, 54},
+{8, 55},
+{9, 56},
+{10, 57},
+{11, 58},
+{12, -50},
 {0}
 };
+
+
 
 int		test_ft_isdigit(int *const ret)
 {
@@ -50,7 +52,7 @@ int		test_ft_isdigit(int *const ret)
 	while (g_test[i].test)
 	{
 		result(g_test[i].num,
-			ft_isdigit(g_test[i].test) == g_test[i].expect);
+			!!ft_isdigit(g_test[i].test) == !!isdigit(g_test[i].test));
 		i++;
 	}
 	printf("\n");
