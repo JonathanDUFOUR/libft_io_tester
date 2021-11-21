@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_isalpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bcano <bcano@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:09:38 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/21 08:38:25 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/21 18:42:15 by bcano            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,47 @@
 #include "tester.h"
 #include "enum/e_ret.h"
 
+typedef struct s_test	t_test;
+
+struct	s_test
+{
+	int const	num;
+	char const	*str;
+	int const	expect;
+};
+
+static t_test const		g_test[] = {
+{0, "hello", 1},
+{1, "Darksasuke99", 0},
+{2, "UPPERCASElowercase", 1},
+{3, " ", 0},
+{4, "Hello world!", 0},
+{0}
+};
+
+
 int	test_ft_isalpha(int *const ret)
 {
+	int	i;
+	int	l;
+	int	res;
+
 	printf("%20s:", __func__ + 5);
+	i = 0;
+	while (g_test[i].str)
+	{
+		res = 0;
+		l = 0;
+		while (g_test[i].str[l])
+		{
+			res = ft_isalpha(g_test[i].str[l]);
+			if (res == 0)
+				break ;
+			l++;
+		}
+		result(g_test[i].num, res == g_test[i].expect);
+		i++;
+	}
 	printf("\n");
 	return (*ret = SUCCESS);
 }
