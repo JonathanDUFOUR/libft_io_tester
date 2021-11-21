@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   internal.h                                         :+:      :+:    :+:   */
+/*   tester.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 01:48:23 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/19 09:39:20 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/21 08:31:59 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INTERNAL_H
-# define INTERNAL_H
+#ifndef TESTER_H
+# define TESTER_H
 
 int		err_msg(int const err);
 
