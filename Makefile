@@ -6,7 +6,7 @@
 #    By: bcano <bcano@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/16 00:16:26 by jodufour          #+#    #+#              #
-#    Updated: 2021/11/21 17:32:20 by bcano            ###   ########.fr        #
+#    Updated: 2021/11/21 21:18:31 by bcano            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ OBJ_DIR			=	objs/
 INC_DIR			=	
 PRV_DIR			=	private/
 
-FT_IO_DIR		=	../
+FT_IO_DIR		=	../libft_io/
 FT_IO_INC_DIR	=	include/
 FT_IO_INC_DIR	:=	${addprefix ${FT_IO_DIR}, ${FT_IO_INC_DIR}}
 
