@@ -6,7 +6,7 @@
 /*   By: bcano <bcano@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:09:38 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/21 19:14:45 by bcano            ###   ########.fr       */
+/*   Updated: 2021/11/21 23:22:42 by bcano            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ static t_test const		g_test[] = {
 {2, "UPPERCASElowercase"},
 {3, " "},
 {4, "Hello world!"},
+{5, ""},
 {0}
 };
 
@@ -53,10 +54,7 @@ int	test_ft_isalpha(int *const ret)
 			res = !!ft_isalpha(g_test[i].str[l]);
 			expect = !!isalpha(g_test[i].str[l]);
 			if (res != expect)
-			{
-				printf("%d, %d", res, expect);
 				break ;
-			}
 			l++;
 		}
 		result(g_test[i].num, res == expect);

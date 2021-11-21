@@ -6,7 +6,7 @@
 /*   By: bcano <bcano@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:13:38 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/21 19:22:03 by bcano            ###   ########.fr       */
+/*   Updated: 2021/11/21 23:23:44 by bcano            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ static t_test const		g_test[] = {
 {2, "UPPERCASElowercase0123456789"},
 {3, "@"},
 {4, "UPPERCASE"},
-{4, "lowercase"},
+{5, "lowercase"},
+{6, ""},
 {0}
 };
 
@@ -54,10 +55,7 @@ int	test_ft_isupper(int *const ret)
 			res = !!ft_isupper(g_test[i].str[l]);
 			expect = !!isupper(g_test[i].str[l]);
 			if (res != expect)
-			{
-				printf("%d, %d", res, expect);
 				break ;
-			}
 			l++;
 		}
 		result(g_test[i].num, res == expect);

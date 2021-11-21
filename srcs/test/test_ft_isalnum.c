@@ -6,7 +6,7 @@
 /*   By: bcano <bcano@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:08:49 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/21 19:09:27 by bcano            ###   ########.fr       */
+/*   Updated: 2021/11/21 23:22:04 by bcano            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ static t_test const		g_test[] = {
 {2, "UPPERCASElowercase0123456789"},
 {3, " "},
 {4, "$>echo 'Hello world!'"},
+{5, ""},
 {0}
 };
 
@@ -53,10 +54,7 @@ int	test_ft_isalnum(int *const ret)
 			res = !!ft_isalnum(g_test[i].str[l]);
 			expect = !!isalnum(g_test[i].str[l]);
 			if (res != expect)
-			{
-				printf("%d, %d", res, expect);
 				break ;
-			}
 			l++;
 		}
 		result(g_test[i].num, res == expect);
