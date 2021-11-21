@@ -6,7 +6,7 @@
 /*   By: bcano <bcano@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:10:23 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/21 18:55:51 by bcano            ###   ########.fr       */
+/*   Updated: 2021/11/21 19:19:07 by bcano            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	test_ft_isascii(int *const ret)
 	while (g_test[i].test)
 	{
 		result(g_test[i].num,
-			ft_isascii(g_test[i].test) == isascii(g_test[i].test));
+			!!ft_isascii(g_test[i].test) == !!isascii(g_test[i].test));
 		i++;
 	}
 	printf("\n");
