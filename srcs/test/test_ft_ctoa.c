@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 22:49:40 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/21 11:07:56 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/22 17:53:23 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ struct s_test
 };
 
 static t_test const		g_test[] = {
-{0, 0, ""},
-{1, ' ', " "},
-{2, 'A', "A"},
-{3, '\e', "\e"},
-{4, '\t', "\t"},
-{5, 'f', "f"},
-{6, 't', "t"},
+{1, 0, ""},
+{2, ' ', " "},
+{3, 'A', "A"},
+{4, '\e', "\e"},
+{5, '\t', "\t"},
+{6, 'f', "f"},
+{7, 't', "t"},
 {0}
 };
 
@@ -43,7 +43,7 @@ int	test_ft_ctoa(int *const ret)
 
 	printf("%20s:", __func__ + 5);
 	i = 0;
-	while (g_test[i].expect)
+	while (g_test[i].num)
 	{
 		str = ft_ctoa(g_test[i].c);
 		result(g_test[i].num,

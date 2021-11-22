@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 09:21:15 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/21 10:05:56 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/22 17:44:11 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,20 @@ struct s_test
 };
 
 static t_test const		g_test[] = {
-{0, "42", "", 0},
-{1, "21", "+0123456789", 0},
-{2, "101010", "01-", 0},
-{3, "fee", "poney vif", 0},
-{4, "  +aa", "a", 0},
-{5, "ABBA  ", "BAOBAB", 0},
-{6, "ABBA  ", "BA", 9},
-{7, "+||||........", "|.", UCHAR_MAX},
-{8, "  -2AbC", "0123456789ABCDEF", 0},
-{9, "+fff acdc", "0123456789abcdef", UCHAR_MAX},
-{10, "++010101", "10", 0},
-{11, " +010101", "10", 42},
-{12, "+Jonathan", "ahnJto", 6},
-{13, " XXX 4242", "XP", 0},
+{1, "42", "", 0},
+{2, "21", "+0123456789", 0},
+{3, "101010", "01-", 0},
+{4, "fee", "poney vif", 0},
+{5, "  +aa", "a", 0},
+{6, "ABBA  ", "BAOBAB", 0},
+{7, "ABBA  ", "BA", 9},
+{8, "+||||........", "|.", UCHAR_MAX},
+{9, "  -2AbC", "0123456789ABCDEF", 0},
+{10, "+fff acdc", "0123456789abcdef", UCHAR_MAX},
+{11, "++010101", "10", 0},
+{12, " +010101", "10", 42},
+{13, "+Jonathan", "ahnJto", 6},
+{14, " XXX 4242", "XP", 0},
 {0}
 };
 
@@ -50,7 +50,7 @@ int	test_ft_atohhu_base(int *const ret)
 
 	printf("%20s:", __func__ + 5);
 	i = 0;
-	while (g_test[i].str)
+	while (g_test[i].num)
 	{
 		result(g_test[i].num,
 			ft_atohhu_base(g_test[i].str, g_test[i].base) == g_test[i].expect);

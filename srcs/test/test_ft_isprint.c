@@ -3,64 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_isprint.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bcano <bcano@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:12:30 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/21 23:23:18 by bcano            ###   ########.fr       */
+/*   Updated: 2021/11/23 00:21:37 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctype.h>
 #include <stdio.h>
+#include <limits.h>
 #include "ft_io.h"
 #include "tester.h"
 #include "enum/e_ret.h"
 
-typedef struct s_test	t_test;
-
-struct	s_test
-{
-	int const	num;
-	char const	*str;
-};
-
-static t_test const		g_test[] = {
-{0, "hellØ"},
-{1, "darksasuke"},
-{2, "UPPERCASElowercase0123456789"},
-{3, " "},
-{4, "l'accent circonflexe se porte sur toutes les voyelles, sauf le y (â, ê, î, ô, û)"},
-{5, "~"},
-{6, ""},
-{0}
-};
-
-
 int	test_ft_isprint(int *const ret)
 {
-	int	i;
-	int	l;
-	int	res;
-	int	expect;
+	int	c;
 
 	printf("%20s:", __func__ + 5);
-	i = 0;
-	while (g_test[i].str)
-	{
-		res = 0;
-		expect = 0;
-		l = 0;
-		while (g_test[i].str[l])
-		{
-			res = !!ft_isprint(g_test[i].str[l]);
-			expect = !!isprint(g_test[i].str[l]);
-			if (res != expect)
-				break ;
-			l++;
-		}
-		result(g_test[i].num, res == expect);
-		i++;
-	}
+	c = CHAR_MIN;
+	while (c < CHAR_MAX && !!ft_isprint(c) == !!isprint(c))
+		++c;
+	result(1, !!ft_isprint(c) == !!isprint(c));
+	if (!!ft_isprint(c) != !!isprint(c))
+		printf(" (%i)", c);
 	printf("\n");
 	return (*ret = SUCCESS);
 }

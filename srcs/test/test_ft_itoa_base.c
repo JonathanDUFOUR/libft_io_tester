@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:16:03 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/21 18:24:56 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/22 18:39:02 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,16 @@ struct s_test
 };
 
 static t_test const		g_test[] = {
-{0, 42, "A", NULL},
-{1, -21, "012-", NULL},
-{2, 12, "01+2", NULL},
-{3, -6, "012 345679", NULL},
-{4, 100, "01234567890", NULL},
-{5, -4996, "01", "-1001110000100"},
-{6, 102030405, "poneyvif", "ipvoviopv"},
-{7, INT_MAX, "0123456789abcdef", "7fffffff"},
-{8, INT_MIN, "0123456789ABCDEF", "-80000000"},
-{9, 0, "fruit", "f"},
+{1, 42, "A", NULL},
+{2, -21, "012-", NULL},
+{3, 12, "01+2", NULL},
+{4, -6, "012 345679", NULL},
+{5, 100, "01234567890", NULL},
+{6, -4996, "01", "-1001110000100"},
+{7, 102030405, "poneyvif", "ipvoviopv"},
+{8, INT_MAX, "0123456789abcdef", "7fffffff"},
+{9, INT_MIN, "0123456789ABCDEF", "-80000000"},
+{10, 0, "fruit", "f"},
 {0}
 };
 
@@ -49,7 +49,7 @@ int	test_ft_itoa_base(int *const ret)
 
 	printf("%20s:", __func__ + 5);
 	i = 0;
-	while (g_test[i].base)
+	while (g_test[i].num)
 	{
 		expect = g_test[i].expect;
 		str = ft_itoa_base(g_test[i].nb, g_test[i].base);

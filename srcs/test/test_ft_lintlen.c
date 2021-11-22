@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:17:08 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/21 21:34:47 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/22 18:39:39 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ struct s_test
 };
 
 static t_test const		g_test[] = {
-{0, 0, 1},
-{1, 42, 2},
-{2, -55, 3},
-{3, LONG_MAX, 19},
-{4, LONG_MIN, 20},
-{5, ULONG_MAX, 2},
-{6, 10000, 5},
-{7, -109, 4},
+{1, 0, 1},
+{2, 42, 2},
+{3, -55, 3},
+{4, LONG_MAX, 19},
+{5, LONG_MIN, 20},
+{6, ULONG_MAX, 2},
+{7, 10000, 5},
+{8, -109, 4},
 {0}
 };
 
@@ -43,7 +43,7 @@ int	test_ft_lintlen(int *const ret)
 
 	printf("%20s:", __func__ + 5);
 	i = 0;
-	while (g_test[i].expect)
+	while (g_test[i].num)
 	{
 		result(g_test[i].num,
 			ft_lintlen(g_test[i].nb) == g_test[i].expect);

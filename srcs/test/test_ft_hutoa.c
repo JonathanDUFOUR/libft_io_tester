@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:05:23 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/21 11:32:35 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/22 18:28:02 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ struct s_test
 };
 
 static t_test const		g_test[] = {
-{0, 0, "0"},
-{1, 1, "1"},
-{2, 42, "42"},
-{3, 100, "100"},
-{4, 8461, "8461"},
-{5, USHRT_MAX, "65535"},
-{6, -120, "65416"},
+{1, 0, "0"},
+{2, 1, "1"},
+{3, 42, "42"},
+{4, 100, "100"},
+{5, 8461, "8461"},
+{6, USHRT_MAX, "65535"},
+{7, -120, "65416"},
 {0}
 };
 
@@ -44,7 +44,7 @@ int	test_ft_hutoa(int *const ret)
 
 	printf("%20s:", __func__ + 5);
 	i = 0;
-	while (g_test[i].expect)
+	while (g_test[i].num)
 	{
 		str = ft_hutoa(g_test[i].nb);
 		result(g_test[i].num,
