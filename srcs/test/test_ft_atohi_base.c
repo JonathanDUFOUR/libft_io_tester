@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 09:21:31 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/22 17:45:07 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/23 19:53:28 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,3 @@ int	test_ft_atohi_base(int *const ret)
 	printf("\n");
 	return (*ret = SUCCESS);
 }
-
-/*
-**	nb:   Jonathan
-**	base: ahnJto
-**
-**	1089542
-*/

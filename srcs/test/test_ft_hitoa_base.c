@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:02:20 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/22 17:56:08 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/23 19:54:32 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	test_ft_hitoa_base(int *const ret)
 		expect = g_test[i].expect;
 		str = ft_hitoa_base(g_test[i].nb, g_test[i].base);
 		result(g_test[i].num,
-			(!str && !expect) || (str && !strcmp(str, expect)));
+			(!str && !expect) || (str && expect && !strcmp(str, expect)));
 		free(str);
 		++i;
 	}
