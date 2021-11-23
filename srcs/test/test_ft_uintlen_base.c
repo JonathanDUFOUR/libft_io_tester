@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 01:03:46 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/23 02:15:07 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/23 18:53:53 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,3 @@ int	test_ft_uintlen_base(int *const ret)
 	printf("\n");
 	return (*ret = SUCCESS);
 }
-

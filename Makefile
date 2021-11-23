@@ -6,7 +6,7 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/16 00:16:26 by jodufour          #+#    #+#              #
-#    Updated: 2021/11/23 02:38:34 by jodufour         ###   ########.fr        #
+#    Updated: 2021/11/23 03:03:11 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -159,20 +159,20 @@ SRC				=	\
 ######################################
 #            OBJECT FILES            #
 ######################################
-OBJ			=	${SRC:.c=.o}
-OBJ			:=	${addprefix ${OBJ_DIR}, ${OBJ}}
+OBJ				=	${SRC:.c=.o}
+OBJ				:=	${addprefix ${OBJ_DIR}, ${OBJ}}
 
-DEP			=	${OBJ:.o=.d}
+DEP				=	${OBJ:.o=.d}
 
 #######################################
 #                FLAGS                #
 #######################################
-CFLAGS		=	-Wall -Wextra -Werror
-CFLAGS		+=	-MMD -MP
-CFLAGS		+=	-I${PRV_DIR}
-CFLAGS		+=	-I${FT_IO_INC_DIR}
+CFLAGS			=	-Wall -Wextra -Werror
+CFLAGS			+=	-MMD -MP
+CFLAGS			+=	-I${PRV_DIR}
+CFLAGS			+=	-I${FT_IO_INC_DIR}
 
-LDFLAGS		=	-L${FT_IO_DIR} -lft_io
+LDFLAGS			=	-L${FT_IO_DIR} -lft_io
 
 ifeq (${DEBUG}, 1)
 	CPPFLAGS	+=	-g
