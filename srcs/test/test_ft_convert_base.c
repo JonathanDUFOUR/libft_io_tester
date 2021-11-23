@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 22:48:42 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/23 21:06:59 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/23 21:12:16 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,16 +44,6 @@ static t_test const		g_test[] = {
 {14, "Jonathan", "koalA", "fruit", "f"},
 {0}
 };
-
-/*
-**	p o n e y v i f
-**	0 1 2 3 4 5 6 7
-**
-**	10222
-**	opnnn
-**
-**	9 8 7 6 5 4 3 2 1 0
-*/
 
 int	test_ft_convert_base(int *const ret)
 {
