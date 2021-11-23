@@ -6,55 +6,28 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 01:01:42 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/23 01:12:01 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/23 02:47:45 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <ctype.h>
 #include <stdio.h>
+#include <limits.h>
 #include "ft_io.h"
 #include "tester.h"
 #include "enum/e_ret.h"
 
-typedef struct s_test	t_test;
-
-struct	s_test
-{
-	int const	num;
-	char const	*str;
-};
-
-static t_test const		g_test[] = {
-{1, "hello"},
-{2, "darksasuke"},
-{3, "UPPERCASElowercase0123456789"},
-{4, " "},
-{5, "UPPERCASE"},
-{6, "lowercase"},
-{7, ""},
-{0}
-};
-
 int	test_ft_tolower(int *const ret)
 {
-	int	i;
-	int	j;
+	int	c;
 
 	printf("%20s:", __func__ + 5);
-	i = 0;
-	while (g_test[i].num)
-	{
-		j = 0;
-		while (g_test[i].str[j])
-		{
-			if (!!ft_tolower(g_test[i].str[j]) != !!tolower(g_test[i].str[j]))
-				break ;
-			j++;
-		}
-		result(g_test[i].num,
-			!!ft_tolower(g_test[i].str[j]) == !!tolower(g_test[i].str[j]));
-		i++;
-	}
+	c = CHAR_MIN;
+	while (c < CHAR_MAX && ft_tolower(c) == tolower(c))
+		++c;
+	result(1, ft_tolower(c) == tolower(c));
+	if (ft_tolower(c) != tolower(c))
+		printf(" (%i)", c);
 	printf("\n");
 	return (*ret = SUCCESS);
 }
