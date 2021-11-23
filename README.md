@@ -1,9 +1,9 @@
-# LIFT_IO_TESTER
+# LIBFT_IO_TESTER
 
-This tester will test all fonction from libft io
+This tester will test each fonction from libft_io
 
 ## How to run 
 
-- All test: `./libft_io_unit_test`
-- One specify test `./libft_io_unit_test [function_to_test]`
+- Every tests: `./unit_test`
+- Specific tests: `./unit_test [function_name] [function_name] ...`
 

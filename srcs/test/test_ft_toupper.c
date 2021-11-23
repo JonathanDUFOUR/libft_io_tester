@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 01:02:19 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/22 22:21:22 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/23 01:12:11 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ static t_test const		g_test[] = {
 {7, ""},
 {0}
 };
-
 
 int	test_ft_toupper(int *const ret)
 {

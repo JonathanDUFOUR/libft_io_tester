@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:09:38 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/23 00:20:37 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/23 01:12:32 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,3 @@ int	test_ft_isalpha(int *const ret)
 	printf("\n");
 	return (*ret = SUCCESS);
 }
-
