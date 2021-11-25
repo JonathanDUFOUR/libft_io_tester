@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 00:27:16 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/25 17:31:27 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/25 18:24:54 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ enum	e_ret
 	READ_ERR,
 	CLOSE_ERR,
 	MALLOC_ERR,
+	FT_PUTSTR_FD_ERR,
+	FT_PUTENDL_FD_ERR,
 	FT_PUTCHAR_FD_ERR,
-	FT_PUTENDL_FD_ERR
 };
 
 #endif
