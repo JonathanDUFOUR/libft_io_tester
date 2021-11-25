@@ -6,7 +6,7 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/16 00:16:26 by jodufour          #+#    #+#              #
-#    Updated: 2021/11/23 03:03:11 by jodufour         ###   ########.fr        #
+#    Updated: 2021/11/25 17:46:49 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -175,7 +175,7 @@ CFLAGS			+=	-I${FT_IO_INC_DIR}
 LDFLAGS			=	-L${FT_IO_DIR} -lft_io
 
 ifeq (${DEBUG}, 1)
-	CPPFLAGS	+=	-g
+	CFLAGS		+=	-g
 endif
 
 #######################################

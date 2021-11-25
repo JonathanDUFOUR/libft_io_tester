@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:34:02 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/24 08:35:17 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/24 08:50:24 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ int	test_ft_putchar_fd(int *const ret)
 		read(fd[0], buff, 1);
 	}
 	result(1, *buff == c);
+	printf("\n");
 	if (close(fd[0]) == -1 || close(fd[1]) == -1)
 		return (*ret = CLOSE_ERR);
-	printf("\n");
 	return (*ret = SUCCESS);
 }
