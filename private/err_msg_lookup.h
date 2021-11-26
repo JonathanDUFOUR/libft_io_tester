@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 09:27:29 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/25 21:09:26 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/26 01:07:45 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,16 @@ static t_err_msg const		g_err_msg[] = {
 {FT_PUTCHAR_FD_ERR, "ft_putchar_fd() failed"},
 {FT_PUTBYTE_FD_ERR, "ft_putbyte_fd() failed"},
 {FT_PUTBYTES_FD_ERR, "ft_putbytes_fd() failed"},
+{FT_PUTHHINT_FD_ERR, "ft_puthhint_fd() failed"},
+{FT_PUTHHUINT_FD_ERR, "ft_puthhuint_fd() failed"},
+{FT_PUTHINT_FD_ERR, "ft_puthint_fd() failed"},
+{FT_PUTHUINT_FD_ERR, "ft_puthuint_fd() failed"},
+{FT_PUTINT_FD_ERR, "ft_putint_fd() failed"},
+{FT_PUTUINT_FD_ERR, "ft_putuint_fd() failed"},
+{FT_PUTLINT_FD_ERR, "ft_putlint_fd() failed"},
+{FT_PUTLUINT_FD_ERR, "ft_putluint_fd() failed"},
+{FT_PUTLLINT_FD_ERR, "ft_putllint_fd() failed"},
+{FT_PUTLLUINT_FD_ERR, "ft_putlluint_fd() failed"},
 {0}
 };
 
