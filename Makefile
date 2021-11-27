@@ -6,7 +6,7 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/16 00:16:26 by jodufour          #+#    #+#              #
-#    Updated: 2021/11/27 14:26:10 by jodufour         ###   ########.fr        #
+#    Updated: 2021/11/27 14:51:04 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,6 @@ SRC				=	\
 						test_ft_convert_base.c		\
 						test_ft_ctoa.c				\
 						test_ft_fddel.c				\
-						test_ft_file_size.c			\
 						test_ft_hhintlen_base.c		\
 						test_ft_hhintlen.c			\
 						test_ft_hhitoa_base.c		\
