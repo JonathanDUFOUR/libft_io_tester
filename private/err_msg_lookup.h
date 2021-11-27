@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 09:27:29 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/27 00:10:26 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/27 13:38:33 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ static t_err_msg const		g_err_msg[] = {
 {FT_PUTLUINT_BASE_FD_ERR, "ft_putluint_base_fd() failed"},
 {FT_PUTLLINT_BASE_FD_ERR, "ft_putllint_base_fd() failed"},
 {FT_PUTLLUINT_BASE_FD_ERR, "ft_putlluint_base_fd() failed"},
+{FT_PUTWCHAR_FD_ERR, "ft_putwchar_fd() failed"},
 {0}
 };
 

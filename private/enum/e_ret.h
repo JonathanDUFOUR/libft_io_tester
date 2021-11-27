@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 00:27:16 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/27 00:10:32 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/27 13:38:05 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,8 @@ enum	e_ret
 	FT_PUTLINT_BASE_FD_ERR,
 	FT_PUTLUINT_BASE_FD_ERR,
 	FT_PUTLLINT_BASE_FD_ERR,
-	FT_PUTLLUINT_BASE_FD_ERR
+	FT_PUTLLUINT_BASE_FD_ERR,
+	FT_PUTWCHAR_FD_ERR
 };
 
 #endif

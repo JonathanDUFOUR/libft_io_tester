@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 00:58:02 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/25 18:24:37 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/27 14:07:14 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,11 @@ static int	test_one(int const i, int const *fd, int *const ret)
 	ssize_t	rd;
 
 	len = strlen(g_test[i].str);
+	if (ft_putstr_fd(g_test[i].str, fd[1]) == -1)
+		return (*ret = FT_PUTSTR_FD_ERR);
 	buff = malloc((len + 1) * sizeof(char));
 	if (!buff)
 		return (*ret = MALLOC_ERR);
-	if (ft_putstr_fd(g_test[i].str, fd[1]) == -1)
-	{
-		free(buff);
-		return (*ret = FT_PUTSTR_FD_ERR);
-	}
 	rd = read(fd[0], buff, len);
 	if (rd == -1)
 	{
