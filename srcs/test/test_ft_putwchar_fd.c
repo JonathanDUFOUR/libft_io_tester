@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 01:00:55 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/27 14:07:37 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/27 14:16:25 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,8 @@ static int	test_one(int const i, int const *fd, int *const ret)
 
 int	test_ft_putwchar_fd(int *const ret)
 {
-	int		fd[2];
-	int		i;
+	int	fd[2];
+	int	i;
 
 	setlocale(LC_CTYPE, "");
 	if (pipe(fd) == -1)

@@ -6,7 +6,7 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/16 00:16:26 by jodufour          #+#    #+#              #
-#    Updated: 2021/11/25 17:46:49 by jodufour         ###   ########.fr        #
+#    Updated: 2021/11/27 14:26:10 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,6 @@ SRC				=	\
 						test_ft_atolu.c				\
 						test_ft_atou_base.c			\
 						test_ft_atou.c				\
-						test_ft_cat.c				\
 						test_ft_convert_base.c		\
 						test_ft_ctoa.c				\
 						test_ft_fddel.c				\
