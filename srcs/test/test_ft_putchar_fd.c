@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:34:02 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/24 08:50:24 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/26 22:58:14 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,15 @@ int	test_ft_putchar_fd(int *const ret)
 	c = CHAR_MIN;
 	if (ft_putchar_fd(c, fd[1]) == -1)
 		return (*ret = FT_PUTCHAR_FD_ERR);
-	read(fd[0], buff, 1);
+	if (read(fd[0], buff, 1) == -1)
+		return (*ret = READ_ERR);
 	while (c < CHAR_MAX && c == *buff)
 	{
 		++c;
 		if (ft_putchar_fd(c, fd[1]) == -1)
 			return (*ret = FT_PUTCHAR_FD_ERR);
-		read(fd[0], buff, 1);
+		if (read(fd[0], buff, 1) == -1)
+			return (*ret = READ_ERR);
 	}
 	result(1, *buff == c);
 	printf("\n");
