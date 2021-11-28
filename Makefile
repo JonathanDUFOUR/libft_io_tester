@@ -6,7 +6,7 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/16 00:16:26 by jodufour          #+#    #+#              #
-#    Updated: 2021/11/27 14:51:04 by jodufour         ###   ########.fr        #
+#    Updated: 2021/11/28 22:12:40 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,19 @@ FT_IO_A			:=	${addprefix ${FT_IO_DIR}, ${FT_IO_A}}
 ######################################
 SRC				=	\
 					${addprefix test/,				\
+						${addprefix ft_printf/,		\
+							test_cvrt_c.c			\
+							test_cvrt_d.c			\
+							test_cvrt_i.c			\
+							test_cvrt_p.c			\
+							test_cvrt_prct.c		\
+							test_cvrt_s.c			\
+							test_cvrt_u.c			\
+							test_cvrt_x_lower.c		\
+							test_cvrt_x_upper.c		\
+							test_ft_printf.c		\
+							test_literal.c			\
+						}							\
 						test_ft_atohhi_base.c		\
 						test_ft_atohhi.c			\
 						test_ft_atohhu_base.c		\
@@ -115,7 +128,6 @@ SRC				=	\
 						test_ft_luintlen.c			\
 						test_ft_lutoa_base.c		\
 						test_ft_lutoa.c				\
-						test_ft_printf.c			\
 						test_ft_putbyte_fd.c		\
 						test_ft_putbytes_fd.c		\
 						test_ft_putchar_fd.c		\
@@ -151,6 +163,7 @@ SRC				=	\
 						test_get_next_line.c		\
 					}								\
 					err_msg.c						\
+					get_str.c						\
 					main.c							\
 					result.c
 
@@ -165,7 +178,7 @@ DEP				=	${OBJ:.o=.d}
 #######################################
 #                FLAGS                #
 #######################################
-CFLAGS			=	-Wall -Wextra -Werror
+CFLAGS			=	-Wall -Wextra# -Werror
 CFLAGS			+=	-MMD -MP
 CFLAGS			+=	-I${PRV_DIR}
 CFLAGS			+=	-I${FT_IO_INC_DIR}

@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_printf.c                                   :+:      :+:    :+:   */
+/*   test_cvrt_u.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 23:29:04 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/21 08:38:25 by jodufour         ###   ########.fr       */
+/*   Created: 2021/11/27 16:09:00 by jodufour          #+#    #+#             */
+/*   Updated: 2021/11/27 23:09:01 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "ft_io.h"
-#include "tester.h"
 #include "enum/e_ret.h"
 
-int	test_ft_printf(int *const ret)
+int	test_cvrt_u(int const *fd, int *const ret)
 {
-	printf("%20s:", __func__ + 5);
-	printf("\n");
+	(void)fd;
 	return (*ret = SUCCESS);
 }

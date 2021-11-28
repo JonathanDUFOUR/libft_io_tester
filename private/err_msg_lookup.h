@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 09:27:29 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/27 14:30:44 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/28 19:51:26 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,16 @@ struct s_err_msg
 };
 
 static t_err_msg const		g_err_msg[] = {
+{DUP_ERR, "dup() failed"},
+{DUP2_ERR, "dup2() failed"},
 {PIPE_ERR, "pipe() failed"},
 {READ_ERR, "read() failed"},
 {WRITE_ERR, "write() failed"},
 {CLOSE_ERR, "close() failed"},
+{FSTAT_ERR, "fstat() failed"},
 {MALLOC_ERR, "malloc() failed"},
 {FT_FDDEL_ERR, "ft_fddel() failed"},
+{FT_PRINTF_ERR, "ft_printf() failed"},
 {FT_PUTSTR_FD_ERR, "ft_putstr_fd() failed"},
 {FT_PUTENDL_FD_ERR, "ft_putendl_fd() failed"},
 {FT_PUTCHAR_FD_ERR, "ft_putchar_fd() failed"},

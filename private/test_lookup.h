@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 01:14:11 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/27 14:51:44 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/27 15:21:44 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -196,7 +196,6 @@ static t_test const		g_test[] = {
 {"ft_luintlen_base", test_ft_luintlen_base},
 {"ft_lutoa", test_ft_lutoa},
 {"ft_lutoa_base", test_ft_lutoa_base},
-{"ft_printf", test_ft_printf},
 {"ft_putbyte_fd", test_ft_putbyte_fd},
 {"ft_putbytes_fd", test_ft_putbytes_fd},
 {"ft_putchar_fd", test_ft_putchar_fd},
@@ -230,6 +229,7 @@ static t_test const		g_test[] = {
 {"ft_utoa", test_ft_utoa},
 {"ft_utoa_base", test_ft_utoa_base},
 {"get_next_line", test_get_next_line},
+{"ft_printf", test_ft_printf},
 {0}
 };
 

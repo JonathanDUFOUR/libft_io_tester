@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tester.h                                           :+:      :+:    :+:   */
+/*   test_cvrt_c.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 01:48:23 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/28 22:11:15 by jodufour         ###   ########.fr       */
+/*   Created: 2021/11/27 16:06:56 by jodufour          #+#    #+#             */
+/*   Updated: 2021/11/27 23:22:24 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TESTER_H
-# define TESTER_H
+#include "enum/e_ret.h"
 
-int		err_msg(int const err);
-int		get_str(char **const str, int const *fd, int *const ret);
-
-void	result(int const num, int const res);
-
-#endif
+int	test_cvrt_c(int const *fd, int *const ret)
+{
+	(void)fd;
+	return (*ret = SUCCESS);
+}

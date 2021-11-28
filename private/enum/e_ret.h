@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 00:27:16 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/27 14:30:20 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/28 19:51:08 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,16 @@
 enum	e_ret
 {
 	SUCCESS,
+	DUP_ERR,
+	DUP2_ERR,
 	PIPE_ERR,
 	READ_ERR,
 	WRITE_ERR,
 	CLOSE_ERR,
+	FSTAT_ERR,
 	MALLOC_ERR,
 	FT_FDDEL_ERR,
+	FT_PRINTF_ERR,
 	FT_PUTSTR_FD_ERR,
 	FT_PUTENDL_FD_ERR,
 	FT_PUTCHAR_FD_ERR,
