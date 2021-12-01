@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 23:24:17 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/28 22:12:56 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/11/29 11:55:59 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static int	call0(int const i, int const *fd, int *const r, int *const ret)
 		return (*ret = DUP_ERR);
 	if (dup2(fd[1], 1) == -1)
 		return (*ret = DUP2_ERR);
-	*r = printf(g_test[i].format);
+	r[0] = printf(g_test[i].format);
 	fflush(stdout);
 	if (dup2(save, 1) == -1)
 		return (*ret = DUP2_ERR);
@@ -76,7 +76,7 @@ static int	call1(int const i, int const *fd, int *const r, int *const ret)
 		return (*ret = DUP_ERR);
 	if (dup2(fd[1], 1) == -1)
 		return (*ret = DUP2_ERR);
-	*r = ft_printf(g_test[i].format);
+	r[1] = ft_printf(g_test[i].format);
 	if (dup2(save, 1) == -1)
 		return (*ret = DUP2_ERR);
 	if (close(save) == -1)
@@ -91,11 +91,11 @@ static int	test_one(int const i, int const *fd, int *const ret)
 
 	str[0] = NULL;
 	str[1] = NULL;
-	if (call0(i, fd, &r[0], ret))
+	if (call0(i, fd, r, ret))
 		return (*ret);
 	if (get_str(&str[0], fd, ret))
 		return (*ret);
-	if (call1(i, fd, &r[1], ret))
+	if (call1(i, fd, r, ret))
 		return (*ret);
 	if (get_str(&str[1], fd, ret))
 		return (*ret);
