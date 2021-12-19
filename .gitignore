@@ -1,8 +1,5 @@
-**
-
-!srcs/
-!private/
-!*.c
-!*.h
-!Makefile
-!.gitignore
+**.a
+**.o
+**.d
+**.so
+unit_test
