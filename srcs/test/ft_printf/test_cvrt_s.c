@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 16:08:56 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/29 12:28:32 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/12/22 21:29:43 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ typedef struct s_test	t_test;
 struct s_test
 {
 	int const	num;
-	char const	*s0;
-	char const	*s1;
-	char const	*s2;
+	char const	*str0;
+	char const	*str1;
+	char const	*str2;
 };
 
 static t_test const		g_test[] = {
@@ -62,15 +62,18 @@ static int	call0(int const i, int const *fd, int *r, int *const ret)
 {
 	int	save;
 
-	save = dup(1);
+	save = dup(STDOUT_FILENO);
 	if (save == -1)
 		return (*ret = DUP_ERR);
-	if (dup2(fd[1], 1) == -1)
+	if (close(STDOUT_FILENO) == -1)
+		return (*ret = CLOSE_ERR);
+	if (dup2(fd[1], STDOUT_FILENO) == -1)
 		return (*ret = DUP2_ERR);
 	r[0] = printf("First str: %s| Second str: %s| Third str: %s",
-			g_test[i].s0, g_test[i].s1, g_test[i].s2);
-	fflush(stdout);
-	if (dup2(save, 1) == -1)
+			g_test[i].str0, g_test[i].str1, g_test[i].str2);
+	if (fflush(stdout))
+		return (*ret = FFLUSH_ERR);
+	if (dup2(save, STDOUT_FILENO) == -1)
 		return (*ret = DUP2_ERR);
 	if (close(save) == -1)
 		return (*ret = CLOSE_ERR);
@@ -81,14 +84,16 @@ static int	call1(int const i, int const *fd, int *r, int *const ret)
 {
 	int	save;
 
-	save = dup(1);
+	save = dup(STDOUT_FILENO);
 	if (save == -1)
 		return (*ret = DUP_ERR);
-	if (dup2(fd[1], 1) == -1)
+	if (close(STDOUT_FILENO) == -1)
+		return (*ret = CLOSE_ERR);
+	if (dup2(fd[1], STDOUT_FILENO) == -1)
 		return (*ret = DUP2_ERR);
 	r[1] = ft_printf("First str: %s| Second str: %s| Third str: %s",
-			g_test[i].s0, g_test[i].s1, g_test[i].s2);
-	if (dup2(save, 1) == -1)
+			g_test[i].str0, g_test[i].str1, g_test[i].str2);
+	if (dup2(save, STDOUT_FILENO) == -1)
 		return (*ret = DUP2_ERR);
 	if (close(save) == -1)
 		return (*ret = CLOSE_ERR);
@@ -112,7 +117,8 @@ static int	test_one(int const i, int const *fd, int *const ret)
 		return (*ret);
 	result(g_test[i].num,
 		r[0] == r[1] && ((!str[0] && !str[1]) || !strcmp(str[0], str[1])));
-	fflush(stdout);
+	if (fflush(stdout))
+		return (*ret = FFLUSH_ERR);
 	free(str[0]);
 	free(str[1]);
 	return (*ret = SUCCESS);

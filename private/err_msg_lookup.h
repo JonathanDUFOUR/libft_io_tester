@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 09:27:29 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/28 19:51:26 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/12/22 21:12:48 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ static t_err_msg const		g_err_msg[] = {
 {CLOSE_ERR, "close() failed"},
 {FSTAT_ERR, "fstat() failed"},
 {MALLOC_ERR, "malloc() failed"},
+{FFLUSH_ERR, "fflush() failed"},
 {FT_FDDEL_ERR, "ft_fddel() failed"},
 {FT_PRINTF_ERR, "ft_printf() failed"},
 {FT_PUTSTR_FD_ERR, "ft_putstr_fd() failed"},

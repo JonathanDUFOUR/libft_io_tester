@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 23:24:17 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/29 11:55:59 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/12/22 21:20:12 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,13 @@ struct s_test
 };
 
 static t_test const		g_test[] = {
-{1, "Hello World"},
-{2, "abcdef 0123456789 !@#$^&*()_+"},
-{3, "42"},
-{4, " koala "},
-{5, "lalipop !!"},
-{6, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
+{1, ""},
+{2, "Hello World"},
+{3, "abcdef 0123456789 !@#$^&*()_+"},
+{4, "42"},
+{5, " koala "},
+{6, "lalipop !!"},
+{7, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
 Sed at hendrerit odio. Pellentesque habitant morbi tristique senectus et \
 netus et malesuada fames ac turpis egestas. Etiam elit nibh, mollis eu justo \
 non, fringilla fringilla massa. Fusce fermentum elementum viverra. In hac \
@@ -53,14 +54,19 @@ static int	call0(int const i, int const *fd, int *const r, int *const ret)
 {
 	int	save;
 
-	save = dup(1);
+	save = dup(STDOUT_FILENO);
 	if (save == -1)
 		return (*ret = DUP_ERR);
-	if (dup2(fd[1], 1) == -1)
+	if (close(STDOUT_FILENO) == -1)
+		return (*ret = CLOSE_ERR);
+	if (dup2(fd[1], STDOUT_FILENO) == -1)
 		return (*ret = DUP2_ERR);
 	r[0] = printf(g_test[i].format);
-	fflush(stdout);
-	if (dup2(save, 1) == -1)
+	if (fflush(stdout))
+		return (*ret = FFLUSH_ERR);
+	if (write(STDOUT_FILENO, "\n", 1) == -1)
+		return (*ret = WRITE_ERR);
+	if (dup2(save, STDOUT_FILENO) == -1)
 		return (*ret = DUP2_ERR);
 	if (close(save) == -1)
 		return (*ret = CLOSE_ERR);
@@ -71,13 +77,17 @@ static int	call1(int const i, int const *fd, int *const r, int *const ret)
 {
 	int	save;
 
-	save = dup(1);
+	save = dup(STDOUT_FILENO);
 	if (save == -1)
 		return (*ret = DUP_ERR);
-	if (dup2(fd[1], 1) == -1)
+	if (close(STDOUT_FILENO) == -1)
+		return (*ret = CLOSE_ERR);
+	if (dup2(fd[1], STDOUT_FILENO) == -1)
 		return (*ret = DUP2_ERR);
 	r[1] = ft_printf(g_test[i].format);
-	if (dup2(save, 1) == -1)
+	if (write(STDOUT_FILENO, "\n", 1) == -1)
+		return (*ret = WRITE_ERR);
+	if (dup2(save, STDOUT_FILENO) == -1)
 		return (*ret = DUP2_ERR);
 	if (close(save) == -1)
 		return (*ret = CLOSE_ERR);
@@ -101,7 +111,8 @@ static int	test_one(int const i, int const *fd, int *const ret)
 		return (*ret);
 	result(g_test[i].num,
 		r[0] == r[1] && ((!str[0] && !str[1]) || !strcmp(str[0], str[1])));
-	fflush(stdout);
+	if (fflush(stdout))
+		return (*ret = FFLUSH_ERR);
 	free(str[0]);
 	free(str[1]);
 	return (*ret = SUCCESS);

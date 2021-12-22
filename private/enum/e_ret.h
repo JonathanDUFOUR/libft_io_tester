@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 00:27:16 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/28 19:51:08 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/12/22 21:12:30 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ enum	e_ret
 	CLOSE_ERR,
 	FSTAT_ERR,
 	MALLOC_ERR,
+	FFLUSH_ERR,
 	FT_FDDEL_ERR,
 	FT_PRINTF_ERR,
 	FT_PUTSTR_FD_ERR,

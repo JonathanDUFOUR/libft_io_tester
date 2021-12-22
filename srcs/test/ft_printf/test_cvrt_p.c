@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 16:08:50 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/29 12:39:07 by jodufour         ###   ########.fr       */
+/*   Updated: 2021/12/22 21:48:25 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,19 @@ typedef struct s_test	t_test;
 struct s_test
 {
 	int const	num;
-	void const	*p0;
-	void const	*p1;
-	void const	*p2;
+	void const	*addr0;
+	void const	*addr1;
+	void const	*addr2;
 };
 
 static t_test const		g_test[] = {
-{1, (void const *)0x0, (void const *)0x151515, (void const *)0x32aa},
-{2, (void const *)0xffeeddcc, (void const *)0x1, (void const *)0x123456789},
-{3, (void const *)0xabcde, (void const *)&printf, (void const *)&write},
-{4, (void const *)ULONG_MAX, (void const *)LONG_MIN, (void const *)LONG_MAX},
-{5, (void const *)&dup, (void const *)&dup2, (void const *)&close},
-{6, (void const *)&g_test, (void const *)&atoi, (void const *)&read},
-{7, (void const *)&pipe, (void const *)&strcat, (void const *)&memchr},
+{1, (void *)0x0, (void *)0x151515, (void *)0x32aa},
+{2, (void *)0xffeeddcc, (void *)0x1, (void *)0x123456789},
+{3, (void *)0xabcde, (void *)&printf, (void *)&write},
+{4, (void *)ULONG_MAX, (void *)LONG_MIN, (void *)LONG_MAX},
+{5, (void *)&dup, (void *)&dup2, (void *)&close},
+{6, (void *)&g_test, (void *)&atoi, (void *)&read},
+{7, (void *)&pipe, (void *)&strcat, (void *)&memchr},
 {0}
 };
 
@@ -44,15 +44,18 @@ static int	call0(int const i, int const *fd, int *r, int *const ret)
 {
 	int	save;
 
-	save = dup(1);
+	save = dup(STDOUT_FILENO);
 	if (save == -1)
 		return (*ret = DUP_ERR);
-	if (dup2(fd[1], 1) == -1)
+	if (close(STDOUT_FILENO) == -1)
+		return (*ret = CLOSE_ERR);
+	if (dup2(fd[1], STDOUT_FILENO) == -1)
 		return (*ret = DUP2_ERR);
 	r[0] = printf("First addr: %p| Second addr: %p| Third addr: %p",
-			g_test[i].p0, g_test[i].p1, g_test[i].p2);
-	fflush(stdout);
-	if (dup2(save, 1) == -1)
+			g_test[i].addr0, g_test[i].addr1, g_test[i].addr2);
+	if (fflush(stdout))
+		return (*ret = FFLUSH_ERR);
+	if (dup2(save, STDOUT_FILENO) == -1)
 		return (*ret = DUP2_ERR);
 	if (close(save) == -1)
 		return (*ret = CLOSE_ERR);
@@ -63,14 +66,16 @@ static int	call1(int const i, int const *fd, int *r, int *const ret)
 {
 	int	save;
 
-	save = dup(1);
+	save = dup(STDOUT_FILENO);
 	if (save == -1)
 		return (*ret = DUP_ERR);
-	if (dup2(fd[1], 1) == -1)
+	if (close(STDOUT_FILENO) == -1)
+		return (*ret = CLOSE_ERR);
+	if (dup2(fd[1], STDOUT_FILENO) == -1)
 		return (*ret = DUP2_ERR);
 	r[1] = ft_printf("First addr: %p| Second addr: %p| Third addr: %p",
-			g_test[i].p0, g_test[i].p1, g_test[i].p2);
-	if (dup2(save, 1) == -1)
+			g_test[i].addr0, g_test[i].addr1, g_test[i].addr2);
+	if (dup2(save, STDOUT_FILENO) == -1)
 		return (*ret = DUP2_ERR);
 	if (close(save) == -1)
 		return (*ret = CLOSE_ERR);
@@ -94,7 +99,8 @@ static int	test_one(int const i, int const *fd, int *const ret)
 		return (*ret);
 	result(g_test[i].num,
 		r[0] == r[1] && ((!str[0] && !str[1]) || !strcmp(str[0], str[1])));
-	fflush(stdout);
+	if (fflush(stdout))
+		return (*ret = FFLUSH_ERR);
 	free(str[0]);
 	free(str[1]);
 	return (*ret = SUCCESS);
