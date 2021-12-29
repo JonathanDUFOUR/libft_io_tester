@@ -6,7 +6,7 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/16 00:16:26 by jodufour          #+#    #+#              #
-#    Updated: 2021/12/19 23:59:29 by jodufour         ###   ########.fr        #
+#    Updated: 2021/12/29 02:18:13 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -105,6 +105,7 @@ SRC				=	\
 							test_ft_atolli.c			\
 							test_ft_atollu.c			\
 							test_ft_atolu.c				\
+							test_ft_atosize.c			\
 							test_ft_atou.c				\
 						}								\
 						${addprefix ft_ato%_base/,		\
