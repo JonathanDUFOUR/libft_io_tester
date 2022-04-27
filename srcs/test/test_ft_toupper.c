@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 01:02:19 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/23 02:48:00 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 09:32:54 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <limits.h>
 #include "ft_io.h"
 #include "tester.h"
-#include "enum/e_ret.h"
+#include "e_ret.h"
 
 int	test_ft_toupper(int *const ret)
 {

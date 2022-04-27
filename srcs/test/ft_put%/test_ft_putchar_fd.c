@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:34:02 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/26 22:58:14 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 09:30:34 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <unistd.h>
 #include "ft_io.h"
 #include "tester.h"
-#include "enum/e_ret.h"
+#include "e_ret.h"
 
 int	test_ft_putchar_fd(int *const ret)
 {

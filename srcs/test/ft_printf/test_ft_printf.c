@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:29:04 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/30 13:33:21 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 09:29:55 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <unistd.h>
 #include "ft_colors.h"
 #include "tester.h"
-#include "enum/e_ret.h"
+#include "e_ret.h"
 
 typedef struct s_test	t_test;
 typedef int(			*t_fct)(int const *fd, int *const ret);

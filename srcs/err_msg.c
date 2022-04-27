@@ -6,13 +6,13 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 09:27:02 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/19 09:38:23 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 09:33:10 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "ft_colors.h"
-#include "err_msg_lookup.h"
+#include "lookup_err_msg.h"
 
 int	err_msg(int const err)
 {

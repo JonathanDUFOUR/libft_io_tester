@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   err_msg_lookup.h                                   :+:      :+:    :+:   */
+/*   lookup_err_msg.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 09:27:29 by jodufour          #+#    #+#             */
-/*   Updated: 2021/12/22 21:12:48 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 09:18:31 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ERR_MSG_LOOKUP_H
-# define ERR_MSG_LOOKUP_H
+#ifndef LOOKUP_ERR_MSG_H
+# define LOOKUP_ERR_MSG_H
 
-# include "enum/e_ret.h"
+# include "e_ret.h"
 
 typedef struct s_err_msg	t_err_msg;
 

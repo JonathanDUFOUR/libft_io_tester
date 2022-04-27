@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_lookup.h                                      :+:      :+:    :+:   */
+/*   lookup_test.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 01:14:11 by jodufour          #+#    #+#             */
-/*   Updated: 2021/12/29 02:17:28 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 09:19:46 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEST_LOOKUP_H
-# define TEST_LOOKUP_H
+#ifndef LOOKUP_TEST_H
+# define LOOKUP_TEST_H
 
 typedef struct s_test	t_test;
-typedef int (			*t_fct)(int *const ret);
+typedef int				(*t_fct)(int *const ret);
 
 struct s_test
 {

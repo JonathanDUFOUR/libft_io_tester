@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 23:24:17 by jodufour          #+#    #+#             */
-/*   Updated: 2021/12/22 21:20:12 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 09:29:58 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <string.h>
 #include "ft_io.h"
 #include "tester.h"
-#include "enum/e_ret.h"
+#include "e_ret.h"
 
 typedef struct s_test	t_test;
 
@@ -32,7 +32,7 @@ static t_test const		g_test[] = {
 {3, "abcdef 0123456789 !@#$^&*()_+"},
 {4, "42"},
 {5, " koala "},
-{6, "lalipop !!"},
+{6, "Lolipop !!"},
 {7, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
 Sed at hendrerit odio. Pellentesque habitant morbi tristique senectus et \
 netus et malesuada fames ac turpis egestas. Etiam elit nibh, mollis eu justo \

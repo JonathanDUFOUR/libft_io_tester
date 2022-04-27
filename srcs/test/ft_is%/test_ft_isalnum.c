@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:08:49 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/23 00:23:37 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 09:28:28 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <limits.h>
 #include "ft_io.h"
 #include "tester.h"
-#include "enum/e_ret.h"
+#include "e_ret.h"
 
 int	test_ft_isalnum(int *const ret)
 {

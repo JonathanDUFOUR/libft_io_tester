@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 22:50:18 by jodufour          #+#    #+#             */
-/*   Updated: 2021/11/27 14:39:57 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/04/27 09:32:42 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <errno.h>
 #include "ft_io.h"
 #include "tester.h"
-#include "enum/e_ret.h"
+#include "e_ret.h"
 
 int	test_ft_fddel(int *const ret)
 {
