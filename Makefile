@@ -6,15 +6,15 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/16 00:16:26 by jodufour          #+#    #+#              #
-#    Updated: 2021/12/29 02:18:13 by jodufour         ###   ########.fr        #
+#    Updated: 2022/05/01 09:42:36 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ######################################
 #              COMMANDS              #
 ######################################
-CC				=	clang -c -o
-LINK			=	clang -o
+CC				=	clang -c
+LINK			=	clang
 MKDIR			=	mkdir -p
 RM				=	rm -rf
 
@@ -72,6 +72,7 @@ SRC				=	\
 						}								\
 						${addprefix ft_%toa/,			\
 							test_ft_ctoa.c				\
+							test_ft_ftoa.c				\
 							test_ft_hhitoa.c			\
 							test_ft_hhutoa.c			\
 							test_ft_hitoa.c				\
@@ -204,7 +205,8 @@ CFLAGS			+=	-MMD -MP
 CFLAGS			+=	-I${PRV_DIR}
 CFLAGS			+=	-I${FT_IO_INC_DIR}
 
-LDFLAGS			=	-L${FT_IO_DIR} -lft_io
+LDFLAGS			=	-lm
+LDFLAGS			+=	-L${FT_IO_DIR} -lft_io
 
 ifeq (${DEBUG}, 1)
 	CFLAGS		+=	-g
@@ -214,7 +216,7 @@ endif
 #                RULES                #
 #######################################
 ${NAME}:	${OBJ} ${FT_IO_A}
-	${LINK} $@ $^ ${LDFLAGS}
+	${LINK} $^ ${LDFLAGS} ${OUTPUT_OPTION}
 
 all:	${NAME}
 
@@ -222,7 +224,7 @@ all:	${NAME}
 
 ${OBJ_DIR}%.o:	${SRC_DIR}%.c
 	@${MKDIR} ${@D}
-	${CC} $@ ${CFLAGS} $<
+	${CC} ${CFLAGS} $< ${OUTPUT_OPTION}
 
 ${FT_IO_A}:
 	${MAKE} ${@F} -C ${@D}
