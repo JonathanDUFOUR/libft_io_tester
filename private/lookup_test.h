@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 01:14:11 by jodufour          #+#    #+#             */
-/*   Updated: 2022/05/01 09:36:01 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/05/01 11:05:24 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int	test_ft_atou(int *const ret);
 int	test_ft_atou_base(int *const ret);
 int	test_ft_convert_base(int *const ret);
 int	test_ft_ctoa(int *const ret);
+int	test_ft_dtoa(int *const ret);
 int	test_ft_fddel(int *const ret);
 int	test_ft_ftoa(int *const ret);
 int	test_ft_hhintlen(int *const ret);
@@ -152,6 +153,7 @@ static t_test const		g_test[] = {
 {"ft_atou_base", test_ft_atou_base},
 {"ft_convert_base", test_ft_convert_base},
 {"ft_ctoa", test_ft_ctoa},
+{"ft_dtoa", test_ft_dtoa},
 {"ft_fddel", test_ft_fddel},
 {"ft_ftoa", test_ft_ftoa},
 {"ft_hhintlen", test_ft_hhintlen},
