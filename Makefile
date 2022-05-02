@@ -6,7 +6,7 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/16 00:16:26 by jodufour          #+#    #+#              #
-#    Updated: 2022/05/02 14:54:46 by jodufour         ###   ########.fr        #
+#    Updated: 2022/05/02 17:27:48 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -209,7 +209,7 @@ CFLAGS			+=	-I${PRV_DIR}
 CFLAGS			+=	-I${FT_IO_INC_DIR}
 
 LDFLAGS			=	-lm
-LDFLAGS			+=	-L${FT_IO_DIR} -lft_io
+LDFLAGS			+=	-L${FT_IO_DIR} -lft_io --static
 
 ifeq (${DEBUG}, 1)
 	CFLAGS		+=	-g
