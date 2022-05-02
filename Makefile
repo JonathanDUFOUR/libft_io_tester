@@ -6,7 +6,7 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/16 00:16:26 by jodufour          #+#    #+#              #
-#    Updated: 2022/05/01 11:03:58 by jodufour         ###   ########.fr        #
+#    Updated: 2022/05/02 14:54:46 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -150,7 +150,9 @@ SRC				=	\
 							test_ft_putbyte_fd.c		\
 							test_ft_putbytes_fd.c		\
 							test_ft_putchar_fd.c		\
+							test_ft_putdouble_fd.c		\
 							test_ft_putendl_fd.c		\
+							test_ft_putfloat_fd.c		\
 							test_ft_putstr_fd.c			\
 							test_ft_putwchar_fd.c		\
 						}								\

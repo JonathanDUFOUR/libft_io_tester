@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 09:27:29 by jodufour          #+#    #+#             */
-/*   Updated: 2022/04/27 09:18:31 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/05/02 14:40:56 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ static t_err_msg const		g_err_msg[] = {
 {FT_PUTCHAR_FD_ERR, "ft_putchar_fd() failed"},
 {FT_PUTBYTE_FD_ERR, "ft_putbyte_fd() failed"},
 {FT_PUTBYTES_FD_ERR, "ft_putbytes_fd() failed"},
+{FT_PUTFLOAT_FD_ERR, "ft_putfloat_fd() failed"},
+{FT_PUTDOUBLE_FD_ERR, "ft_putdouble_fd() failed"},
 {FT_PUTHHINT_FD_ERR, "ft_puthhint_fd() failed"},
 {FT_PUTHHUINT_FD_ERR, "ft_puthhuint_fd() failed"},
 {FT_PUTHINT_FD_ERR, "ft_puthint_fd() failed"},

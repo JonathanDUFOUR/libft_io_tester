@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 00:27:16 by jodufour          #+#    #+#             */
-/*   Updated: 2021/12/22 21:12:30 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/05/02 14:39:39 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ enum	e_ret
 	FT_PUTCHAR_FD_ERR,
 	FT_PUTBYTE_FD_ERR,
 	FT_PUTBYTES_FD_ERR,
+	FT_PUTFLOAT_FD_ERR,
+	FT_PUTDOUBLE_FD_ERR,
 	FT_PUTHHINT_FD_ERR,
 	FT_PUTHHUINT_FD_ERR,
 	FT_PUTHINT_FD_ERR,

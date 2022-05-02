@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 01:14:11 by jodufour          #+#    #+#             */
-/*   Updated: 2022/05/01 11:05:24 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/05/02 14:49:01 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,9 @@ int	test_ft_printf(int *const ret);
 int	test_ft_putbyte_fd(int *const ret);
 int	test_ft_putbytes_fd(int *const ret);
 int	test_ft_putchar_fd(int *const ret);
+int	test_ft_putdouble_fd(int *const ret);
 int	test_ft_putendl_fd(int *const ret);
+int	test_ft_putfloat_fd(int *const ret);
 int	test_ft_puthhint_base_fd(int *const ret);
 int	test_ft_puthhint_fd(int *const ret);
 int	test_ft_puthhuint_base_fd(int *const ret);
@@ -205,7 +207,9 @@ static t_test const		g_test[] = {
 {"ft_putbyte_fd", test_ft_putbyte_fd},
 {"ft_putbytes_fd", test_ft_putbytes_fd},
 {"ft_putchar_fd", test_ft_putchar_fd},
+{"ft_putdouble_fd", test_ft_putdouble_fd},
 {"ft_putendl_fd", test_ft_putendl_fd},
+{"ft_putfloat_fd", test_ft_putfloat_fd},
 {"ft_puthhint_base_fd", test_ft_puthhint_base_fd},
 {"ft_puthhint_fd", test_ft_puthhint_fd},
 {"ft_puthhuint_base_fd", test_ft_puthhuint_base_fd},
