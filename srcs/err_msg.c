@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 09:27:02 by jodufour          #+#    #+#             */
-/*   Updated: 2022/04/27 09:33:10 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/10/06 18:40:49 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ int	err_msg(int const err)
 	i = 0;
 	while (g_err_msg[i].msg && err != g_err_msg[i].err)
 		++i;
-	dprintf(2, RED "Error: %s\n" RESET, g_err_msg[i].msg);
+	dprintf(2, RED_FG "Error: %s\n" RESET, g_err_msg[i].msg);
 	return (err);
 }
