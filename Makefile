@@ -6,14 +6,14 @@
 #    By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/16 00:16:26 by jodufour          #+#    #+#              #
-#    Updated: 2022/05/02 17:27:48 by jodufour         ###   ########.fr        #
+#    Updated: 2023/10/03 04:24:25 by jodufour         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ######################################
 #              COMMANDS              #
 ######################################
-CC				=	clang -c
+CC				=	clang
 LINK			=	clang
 MKDIR			=	mkdir -p
 RM				=	rm -rf
@@ -203,7 +203,8 @@ DEP				=	${OBJ:.o=.d}
 #######################################
 #                FLAGS                #
 #######################################
-CFLAGS			=	-Wall -Wextra# -Werror
+CFLAGS			=	-c
+CFLAGS			+=	-Wall -Wextra# -Werror
 CFLAGS			+=	-MMD -MP
 CFLAGS			+=	-I${PRV_DIR}
 CFLAGS			+=	-I${FT_IO_INC_DIR}
@@ -218,14 +219,14 @@ endif
 #######################################
 #                RULES                #
 #######################################
-${NAME}:	${OBJ} ${FT_IO_A}
+${NAME}: ${OBJ} ${FT_IO_A}
 	${LINK} $^ ${LDFLAGS} ${OUTPUT_OPTION}
 
 all:	${NAME}
 
 -include ${DEP}
 
-${OBJ_DIR}%.o:	${SRC_DIR}%.c
+${OBJ_DIR}%.o: ${SRC_DIR}%.c
 	@${MKDIR} ${@D}
 	${CC} ${CFLAGS} $< ${OUTPUT_OPTION}
 
