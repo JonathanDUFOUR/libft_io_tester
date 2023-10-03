@@ -6,7 +6,7 @@
 /*   By: jodufour <jodufour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:29:04 by jodufour          #+#    #+#             */
-/*   Updated: 2022/09/17 20:38:56 by jodufour         ###   ########.fr       */
+/*   Updated: 2022/10/29 06:44:20 by jodufour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	test_ft_printf(int *const ret)
 	i = 0;
 	while (g_test[i].run)
 	{
-		printf("\n\033[38;2;0;173;255;1m[%s]"RESET"\n", g_test[i].name);
+		printf("\n"YELLOW_FG"[%s]"RESET"\n", g_test[i].name);
 		if (g_test[i].run(fd, ret))
 			return (*ret);
 		++i;
